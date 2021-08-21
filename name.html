@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hurtless</title>
+    <style>
+        body {
+    
+}
+input{
+    width:95%;
+    padding:2%;
+    border:1px solid #3273ed;
+    outline:none;
+    color:#3273ed;
+}
+
+
+input:hover{
+    border:1px solid white;
+    outline:none;
+}
+.exts{
+    color:white;
+    font-weight:800;
+    background-color:#3273ed;
+    padding:1%;
+}
+.pone{
+    background-color:#3273ed;
+    padding:1%;
+    color:white;
+    font-weight:800;
+    border-radius:10px;
+}
+.cpbtn{
+    float:right;
+    background-color:transparent ;
+    border-left:1px solid #fff;
+    border-bottom:1px solid #fff;
+    border-right:1px solid #fff;
+    border-radius:10px;
+     border-top:1px solid #fff;
+     color:white;
+     outline:none;
+     font-weight:800;
+}
+.cpbtn:hover{
+    outline:none;
+}
+
+
+
+.show{
+     opacity:1 !important;
+      bottom:40px !important;
+}
+
+.toast{
+    width:20em;
+    padding:1em;
+    background-color:rgb(97, 88, 88);
+    color:white;
+    text-align: center;
+    left:50%;
+    transform:translateX(-50%);
+    position:absolute;   
+    transition:all 0.4s ease-in-out;
+    bottom:0;
+    opacity:0;
+    position:fixed;
+}
+
+
+
+
+
+
+
+
+    </style>
+    <script>
+        
+      
+function copy(a) {
+var text=a.innerHTML ;
+var  f = document.createElement("textarea" );
+f.innerHTML = text;
+document.body.appendChild(f);
+f.select();
+document.execCommand("copy");
+document.body.removeChild( f);
+show()
+navigator.vibrate(100);
+}
+function change(){
+if(name_.value.length>7){
+name_.value="";
+result.innerHTML="<span class='exts'>Can't exceed letter limit 7 </span>";
+}else{
+var text=name_.value;
+var json=[{"id":"q","to":"🅀"},{"id":"w","to":"🅆"},{"id":"e","to":"🄴"},{"id":"r","to":"🅁"},{"id":"t","to":"🅃"},{"id":"y","to":"🅈"},{"id":"u","to":"🅄"},{"id":"i","to":"🄸"},{"id":"o","to":"🄾"},{"id":"p","to":"🄿"},{"id":"a","to":"🄰"},{"id":"s","to":"🅂"},{"id":"d","to":"🄳"},{"id":"f","to":"🄵"},{"id":"g","to":"🄶"},{"id":"h","to":"🄷"},{"id":"j","to":"🄹"},{"id":"k","to":"🄺"},{"id":"l","to":"🄻"},{"id":"z","to":"🅉"},{"id":"m","to":"🄼"},{"id":"x","to":"🅇"},{"id":"c","to":"🄲"},{"id":"v","to":"🅅"},{"id":"b","to":"🄱"},{"id":"n","to":"🄽"},{"id":"0","to":"０"},{"id":"1","to":"１"},{"id":"2","to":"２"},{"id":"3","to":"３"},{"id":"4","to":"４"},{"id":"5","to":"５"},{"id":"6","to":"６"},{"id":"7","to":"７"},{"id":"8","to":"８"},{"id":"9","to":"９"}];
+
+var ntext="";
+for(i=0;i<text.length;i++){
+for(n=0;n<json.length;n++){
+    if(text.charAt(i).toLowerCase()===json[n].id){
+       ntext=ntext+json[n]["to"];
+       
+    }
+    }
+    
+}
+var font1="<div class='pone'><span onclick='copy(this)'>ʰˡ✿"+ntext+"✿࿐</span></div>"
+if(name_.value.length<4){
+    font1=font1+"<br>"+"<div   class='pone'><span onclick='copy(this)'>ʰˡ✿»-"+ntext+"-«✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font1=font1+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿»"+ntext+"«✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font1=font1+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿✩"+ntext+"✩✿࿐</span></div>";
+}
+if(name_.value.length<6){
+    font1=font1+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿░"+ntext+"░✿࿐</span></div>";
+}
+
+
+if(name_.value.length<6){
+    font1=font1+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿◕"+ntext+"◕✿࿐</span></div>";
+}
+if(name_.value.length<6){
+    font1=font1+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿¯"+ntext+"¯✿࿐</span></div>";
+}
+
+var json2=[{"id":"q","to":"ｑ"},{"id":"w","to":"ｗ"},{"id":"e","to":"ｅ"},{"id":"r","to":"ｒ"},{"id":"t","to":"ｔ"},{"id":"y","to":"ｙ"},{"id":"u","to":"ｕ"},{"id":"i","to":"ｉ"},{"id":"o","to":"ｏ"},{"id":"p","to":"ｐ"},{"id":"a","to":"ａ"},{"id":"s","to":"ｓ"},{"id":"d","to":"ｄ"},{"id":"f","to":"ｆ"},{"id":"g","to":"ｇ"},{"id":"h","to":"ｈ"},{"id":"j","to":"ｊ"},{"id":"k","to":"ｋ"},{"id":"l","to":"ｌ"},{"id":"z","to":"ｚ"},{"id":"m","to":"ｍ"},{"id":"x","to":"ｘ"},{"id":"c","to":"ｃ"},{"id":"v","to":"ｖ"},{"id":"b","to":"ｂ"},{"id":"n","to":"ｎ"},{"id":"Q","to":"Ｑ"},{"id":"W","to":"Ｗ"},{"id":"E","to":"Ｅ"},{"id":"R","to":"Ｒ"},{"id":"T","to":"Ｔ"},{"id":"Y","to":"Ｙ"},{"id":"U","to":"Ｕ"},{"id":"I","to":"Ｉ"},{"id":"O","to":"Ｏ"},{"id":"P","to":"Ｐ"},{"id":"A","to":"Ａ"},{"id":"S","to":"Ｓ"},{"id":"D","to":"Ｄ"},{"id":"F","to":"Ｆ"},{"id":"G","to":"Ｇ"},{"id":"J","to":"Ｊ"},{"id":"K","to":"Ｋ"},{"id":"L","to":"Ｌ"},{"id":"Z","to":"Ｚ"},{"id":"X","to":"Ｘ"},{"id":"M","to":"Ｍ"},{"id":"N","to":"Ｎ"},{"id":"V","to":"Ｖ"},{"id":"C","to":"Ｃ"},{"id":"0","to":"０"},{"id":"1","to":"１"},{"id":"2","to":"２"},{"id":"3","to":"３"},{"id":"4","to":"４"},{"id":"5","to":"５"},{"id":"6","to":"６"},{"id":"7","to":"７"},{"id":"8","to":"８"},{"id":"9","to":"９"}];
+
+
+
+var nztext="";
+for(l=0;l<text.length;l++){
+for(b=0;b<json2.length;b++){
+    if(text.charAt(l)===json2[b].id){
+       nztext=nztext+json2[b]["to"];
+       
+    }
+    }
+    
+}
+var font2="<div   class='pone'><span onclick='copy(this)'>ʰˡ✿"+nztext+"✿࿐</span></div>"
+if(name_.value.length<4){
+    font2=font2+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿»-"+nztext+"-«✿࿐</span></div>";
+}
+if(name_.value.length<6){
+    font2=font2+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿»"+nztext+"«✿࿐</span></div>";
+}
+if(name_.value.length<6){
+    font2=font2+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿✩"+nztext+"✩✿࿐</span></div>";
+}
+if(name_.value.length<6){
+    font2=font2+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿✩"+nztext+"«✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font2=font2+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿░"+nztext+"░✿࿐</span></div>";
+}
+
+
+if(name_.value.length<6){
+    font2=font2+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿◕"+nztext+"◕✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font2=font2+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿¯"+nztext+"¯✿࿐</span></div>";
+}
+
+
+
+var json3=[{"id":"q","to":"q"},{"id":"w","to":"ω"},{"id":"e","to":"є"},{"id":"r","to":"я"},{"id":"t","to":"т"},{"id":"y","to":"у"},{"id":"u","to":"υ"},{"id":"i","to":"ι"},{"id":"o","to":"σ"},{"id":"p","to":"ρ"},{"id":"a","to":"α"},{"id":"s","to":"ѕ"},{"id":"d","to":"∂"},{"id":"f","to":"f"},{"id":"g","to":"g"},{"id":"h","to":"н"},{"id":"j","to":"נ"},{"id":"k","to":"к"},{"id":"l","to":"ℓ"},{"id":"z","to":"z"},{"id":"x","to":"χ"},{"id":"c","to":"¢"},{"id":"v","to":"ν"},{"id":"b","to":"в"},{"id":"n","to":"и"},{"id":"m","to":"м"},{"id":"0","to":"０"},{"id":"1","to":"１"},{"id":"2","to":"２"},{"id":"3","to":"３"},{"id":"4","to":"４"},{"id":"5","to":"５"},{"id":"6","to":"６"},{"id":"7","to":"７"},{"id":"8","to":"８"},{"id":"9","to":"９"}];
+
+
+var ntext3="";
+for(t=0;t<text.length;t++){
+for(s=0;s<json3.length;s++){
+    if(text.charAt(t).toLowerCase()===json3[s].id){
+       ntext3=ntext3+json3[s]["to"];
+       
+    }
+    }
+    
+}
+var font3="<div   class='pone'><span onclick='copy(this)'>ʰˡ✿"+ntext3+"✿࿐</span></div>"
+if(name_.value.length<4){
+    font3=font3+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿»-"+ntext3+"-«✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font3=font3+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿»"+ntext3+"«✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font3=font3+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿✩"+ntext3+"✩✿࿐</span></div>";
+}
+if(name_.value.length<6){
+    font3=font3+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿░"+ntext3+"░✿࿐</span></div>";
+}
+
+
+if(name_.value.length<6){
+    font3=font3+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿✩"+ntext3+"«✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font3=font3+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿◕"+ntext3+"◕✿࿐</span></div>";
+}
+
+if(name_.value.length<6){
+    font3=font3+"<br>"+"<div  class='pone'><span onclick='copy(this)'>ʰˡ✿¯"+ntext3+"¯✿࿐</span></div>";
+}
+result.innerHTML=font1+"<hr>"+font2+"<hr>"+font3;
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+        <input oninput="change()" id="name_"/>
+       <center><br/> <div id="result">
+           
+       </div></center>
+       <div class="toast">Copied <button onclick="hide()" class="cpbtn">OK</button></div>
+       <script>
+
+const toast = document.querySelector(".toast");
+
+function show (e) {
+    toast.classList.add("show");
+    setTimeout(() => {
+        toast.classList.remove("show")
+    }, 2000)
+}
+function hide(){
+    toast.classList.remove("show")
+}
+</script>
+       
+    </body>
+</html>
